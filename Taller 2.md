@@ -36,8 +36,8 @@ el texto, agrégale una clase" (eso sería el enfoque imperativo); simplemente d
 ## Punto 2 — ¿Qué problema resuelve React?
 
 Antes de React, construir una interfaz interactiva con JavaScript "a mano" significaba
-manipular el DOM directamente: buscar un elemento con `document.getElementById`,
-cambiarle el `innerHTML`, agregarle o quitarle clases, y repetir ese proceso cada vez
+manipular el DOM directamente: buscar un elemento con document.getElementById,
+cambiarle el innerHTML, agregarle o quitarle clases, y repetir ese proceso cada vez
 que cambiaba algo. En una aplicación pequeña esto es manejable, pero en una aplicación
 grande —con decenas de elementos que dependen unos de otros— se vuelve un problema real:
 es fácil que una parte de la pantalla quede desactualizada respecto a los datos, o que
@@ -45,7 +45,7 @@ dos fragmentos de código terminen pisándose al intentar actualizar el mismo el
 
 Esa es la diferencia entre el enfoque **imperativo** y el **declarativo**:
 
-- **Imperativo:** describes el *cómo*, paso a paso ("selecciona este `div`, cámbiale
+- **Imperativo:** describes el *cómo*, paso a paso ("selecciona este div, cámbiale
   el texto, luego agrégale esta clase").
 - **Declarativo:** describes el *qué* ("este texto debe mostrar el nombre del
   usuario"), y la herramienta —React— decide cómo llegar ahí.
@@ -59,7 +59,7 @@ actualizar manualmente cada elemento relacionado con un dato.
 
 Ahí entran los **componentes reutilizables**: en vez de escribir la lógica de "cómo se
 actualiza una tarjeta de producto" en veinte lugares distintos del código, la escribes
-una sola vez dentro de un componente `TarjetaProducto`, y lo usas las veces que
+una sola vez dentro de un componente TarjetaProducto, y lo usas las veces que
 necesites. Si el componente tiene un error o hay que mejorarlo, se corrige en un solo
 lugar y el cambio se refleja en todas partes donde se usa.
 
@@ -94,10 +94,10 @@ función que crea un objeto describiendo ese elemento.
 const elemento = <p>Este texto viene de una variable: {nombre}</p>;
 ```
 
-Reglas básicas: debe devolver un único elemento raíz (o usar un fragmento `<>...</>`
+Reglas básicas: debe devolver un único elemento raíz (o usar un fragmento <>...</>
 para agrupar varios sin agregar una etiqueta extra), las expresiones de JavaScript van
-entre llaves `{}`, y los atributos usan `camelCase` (por ejemplo `className` en lugar
-de `class`, porque `class` es palabra reservada en JavaScript).
+entre llaves {}, y los atributos usan camelCase (por ejemplo className en lugar
+de class, porque class es palabra reservada en JavaScript).
 
 ### 3. Props
 
@@ -121,7 +121,7 @@ que duplicar su código.
 
 El estado es la información que un componente guarda y que puede cambiar con el
 tiempo (por ejemplo, el valor de un contador, o si un menú está abierto o cerrado). El
-hook `useState` permite declarar una variable de estado dentro de un componente de
+hook useState permite declarar una variable de estado dentro de un componente de
 función:
 
 ```jsx
@@ -138,16 +138,16 @@ function Contador() {
 }
 ```
 
-`useState(0)` devuelve un par: el valor actual (`cuenta`) y una función para
-actualizarlo (`setCuenta`). Cada vez que se llama a `setCuenta`, React vuelve a
+useState(0) devuelve un par: el valor actual (cuenta) y una función para
+actualizarlo (setCuenta). Cada vez que se llama a setCuenta, React vuelve a
 ejecutar el componente con el nuevo valor y actualiza en pantalla únicamente lo que
 cambió — así es como la interfaz "reacciona" a los cambios de estado.
 
 ### 5. Eventos
 
 React permite escuchar eventos del usuario (clics, escritura, envío de formularios)
-pasando funciones directamente como atributos, en `camelCase`: `onClick`, `onChange`,
-`onSubmit`, etc.
+pasando funciones directamente como atributos, en camelCase: onClick, onChange,
+onSubmit, etc.
 
 ```jsx
 function Campo() {
@@ -162,8 +162,8 @@ function Campo() {
 }
 ```
 
-Aquí, cada vez que el usuario escribe algo en el input, se dispara `onChange`, que
-actualiza el estado `texto` con lo que el usuario escribió, y React vuelve a mostrar
+Aquí, cada vez que el usuario escribe algo en el input, se dispara onChange, que
+actualiza el estado texto con lo que el usuario escribió, y React vuelve a mostrar
 ese valor en el campo. Así es como React conecta la interacción del usuario con los
 cambios de estado.
 
