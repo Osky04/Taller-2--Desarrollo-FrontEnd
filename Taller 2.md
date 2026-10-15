@@ -1,7 +1,7 @@
-# Taller 2 — Investigación: Teoría de React
+# Taller 2 — Desarrollo Front-End
 
 **Nombre:** Oscar Jaime Buelvas Florez
-**Curso:** Desarrollo Front-End
+**Código** T00059876
 
 ---
 
