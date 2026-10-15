@@ -1,6 +1,6 @@
 # Taller 2 — Investigación: Teoría de React
 
-**Nombre:** Oscar Jaime Buelvas Florez (Osky)
+**Nombre:** Oscar Jaime Buelvas Florez
 **Curso:** Desarrollo Front-End
 
 ---
