@@ -117,7 +117,7 @@ function Saludo(props) {
 Sirven para que un mismo componente se comporte distinto según quién lo use, sin tener
 que duplicar su código.
 
-### 4. Estado (`useState`)
+### 4. Estado (useState)
 
 El estado es la información que un componente guarda y que puede cambiar con el
 tiempo (por ejemplo, el valor de un contador, o si un menú está abierto o cerrado). El
